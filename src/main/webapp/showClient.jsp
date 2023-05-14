@@ -103,7 +103,7 @@
                                 <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-${loop.index + 1}">Investment ${loop.index + 1}: ${deposit.pureDeposit.name} (deposit) <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                                 <div id="faq-list-${loop.index + 1}" class="collapse show" data-bs-parent=".faq-list">
                                     <p>
-                                        Investment amount: ${deposit.amount}$. <br />Term: <fmt:formatDate type="date" dateStyle="medium" value="${deposit.term}" />. <br />Bank name: ${deposit.pureDeposit.bankName}. <br />Interest rate: ${deposit.pureDeposit.interestRate}%. <br /><strong>Profit</strong>: ${deposit.profit}.
+                                        Investment amount: ${deposit.amount}$. <br />Term: <fmt:formatDate type="date" dateStyle="medium" value="${deposit.term}" />. <br />Bank name: ${deposit.pureDeposit.bankName}. <br />Interest rate: ${deposit.pureDeposit.interestRate}%. <br /><strong>Profit</strong>: ${deposit.profit}$/y.
                                     </p>
                                     <br />
                                     <form action="${request.contextPath}/investments/delete?investmentId=${deposit.investmentId}&clientId=${client.id}&investmentType=deposit" method="post">
@@ -118,7 +118,7 @@
                                     <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-${loop.index + 1 + deposits.size()}">Investment ${loop.index + 1 + deposits.size()}: ${share.pureShare.name} (share) <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                                     <div id="faq-list-${loop.index + 1 + deposits.size()}" class="collapse show" data-bs-parent=".faq-list">
                                         <p>
-                                            Price: ${share.amount}$. <br />Term: <fmt:formatDate type="date" dateStyle="medium" value="${share.term}" />. <br /><strong>Profit</strong>: ${share.profit}.
+                                            Price: ${share.amount}$. <br />Term: <fmt:formatDate type="date" dateStyle="medium" value="${share.term}" />. <br /><strong>Profit</strong>: ${share.profit}$/y.
                                         </p>
                                         <br />
                                         <form action="${request.contextPath}/investments/delete?investmentId=${share.investmentId}&clientId=${client.id}&investmentType=share" method="post">

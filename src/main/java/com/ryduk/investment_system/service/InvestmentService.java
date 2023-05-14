@@ -61,8 +61,8 @@ public class InvestmentService {
                     ((deposit.getTerm().getTime() - investment.getTerm().getTime()) / 1000 / 60 / 60 / 24 / 30);
         } else{
             Share share = (Share) investment.getInvestment();
-            monthsOfInvestment = 12;
         }
+        monthsOfInvestment = 12;
         double profit = investment.getInvestmentAmount() * monthsOfInvestment;
         if(investment.getInvestment() instanceof Deposit deposit){
             profit = profit * (deposit.getInterestRate() / 100);
