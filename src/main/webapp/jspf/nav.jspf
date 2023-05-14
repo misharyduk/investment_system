@@ -1,0 +1,36 @@
+<!-- ======= Nav ======= -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <h1 class="logo"><a href="${request.pageContext}/home">InvestmentSystem</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="${request.pageContext}/home">Home</a></li>
+                <li><a class="nav-link scrollto" href="${request.pageContext}/investments">Make investment</a></li>
+                <li><a class="nav-link scrollto" href="${request.pageContext}/shares">Shares</a></li>
+                <li><a class="nav-link scrollto o" href="${request.pageContext}/deposits">Deposits</a></li>
+                <li class="dropdown"><a href="#"><span>Clients</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="${request.pageContext}/clients">Show all</a></li>
+                        <%
+
+                            com.ryduk.investment_system.model.UserDetailsImpl user = (com.ryduk.investment_system.model.UserDetailsImpl)
+                                                                            com.ryduk.investment_system.security.SecurityUtil.getUser();
+                            if(user.getRole().equals("ADMIN")){
+                                out.println("<li><a href='/clients/add'>Add client</a></li>");
+                            }
+
+                        %>
+
+                    </ul>
+                </li>
+                <li><a class="getstarted scrollto" href="${request.pageContext}/logout">Logout</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Nav -->
