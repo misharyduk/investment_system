@@ -19,16 +19,6 @@ import java.util.Date;
 @AllArgsConstructor
 @Entity
 public class Deposit extends InvestmentType{
-//    @SequenceGenerator(
-//            name = "deposit_sequence_generator",
-//            sequenceName = "deposit_sequence_generator"
-//    )
-//    @Id
-//    @GeneratedValue(
-//            strategy = GenerationType.SEQUENCE,
-//            generator = "deposit_sequence_generator"
-//    )
-//    private int id;
     @Length(min = 5, max = 255)
     @NotBlank
     private String bankName;

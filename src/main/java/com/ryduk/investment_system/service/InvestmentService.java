@@ -31,7 +31,9 @@ public class InvestmentService {
     public EntityPageDto<Investment> getAllInvestments(PaginationParameters params){
         Sort.Direction direction = Sort.Direction.valueOf(params.getDirection());
 
-        Page<Investment> page = investmentRepo.findAll(PageRequest.of(params.getPage() - 1, params.getPageSize()).withSort(Sort.by(direction, params.getField())));
+        Page<Investment> page = investmentRepo.findAll(
+                PageRequest.of(params.getPage() - 1, params.getPageSize())
+                        .withSort(Sort.by(direction, params.getField())));
         List<Investment> investments = page.stream().toList();
 
         return new EntityPageDto<>(
@@ -52,7 +54,8 @@ public class InvestmentService {
     }
 
     public double calculateProfit(Investment investment){
-        int monthsOfInvestment = (int)((investment.getTerm().getTime() - new Date().getTime()) / 1000 / 60 / 60 / 24 / 30);
+        int monthsOfInvestment = (int)
+                ((investment.getTerm().getTime() - new Date().getTime()) / 1000 / 60 / 60 / 24 / 30);
         double profit = investment.getInvestmentAmount() * monthsOfInvestment;
         if(investment.getInvestment() instanceof Deposit deposit){
             profit = profit * (deposit.getInterestRate() / 100);

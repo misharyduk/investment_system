@@ -33,30 +33,30 @@
                             </div>
 
                         </div>
-                        <form:form action="/signup" class="signin-form" method="POST" modelAttribute="client">
+                        <form:form action="/api/signup" class="signin-form" method="POST" modelAttribute="client">
                             <div class="form-group mt-3">
                                 <form:input name="username" path="username" id="username" type="text" class="form-control"/>
                                 <form:label class="form-control-placeholder" for="username" path="username">Username</form:label>
                             </div>
                             <div class="form-group">
-                                <form:input name="password" path="password" id="password-field" type="password" class="form-control"/>
+                                <form:input style="mt-2" name="password" path="password" id="password-field" type="password" class="form-control"/>
                                 <form:label class="form-control-placeholder" for="password-field" path="password">Password</form:label>
                                 <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                             </div>
                             <div class="form-group">
-                                <form:input name="name" path="name" id="name" type="text" class="form-control"/>
+                                <form:input style="mt-2" name="name" path="name" id="name" type="text" class="form-control"/>
                                 <form:label class="form-control-placeholder" for="name" path="name">Factory Name</form:label>
                             </div>
                             <div class="form-group">
-                                <form:input name="typeOfProperty" path="typeOfProperty" id="typeOfProperty" type="text" class="form-control"/>
+                                <form:input style="mt-2" name="typeOfProperty" path="typeOfProperty" id="typeOfProperty" type="text" class="form-control"/>
                                 <form:label class="form-control-placeholder" for="typeOfProperty" path="typeOfProperty">Type of Property</form:label>
                             </div>
                             <div class="form-group">
-                                <form:input name="address" path="address" id="address" type="text" class="form-control"/>
+                                <form:input style="mt-2" name="address" path="address" id="address" type="text" class="form-control"/>
                                 <form:label class="form-control-placeholder" for="address" path="address">Address</form:label>
                             </div>
                             <div class="form-group">
-                                <form:input name="telephone" path="telephone" id="telephone" type="text" class="form-control"/>
+                                <form:input style="mt-2" name="telephone" path="telephone" id="telephone" type="text" class="form-control"/>
                                 <form:label class="form-control-placeholder" for="telephone" path="telephone">Telephone</form:label>
                             </div>
                             <div class="form-group">

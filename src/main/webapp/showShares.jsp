@@ -13,32 +13,25 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="${request.contextPath}/assets/img/favicon.png" rel="icon">
+    <link href="${request.contextPath}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
           rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="${request.contextPath}/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="${request.contextPath}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${request.contextPath}/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="${request.contextPath}/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="${request.contextPath}/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="${request.contextPath}/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="${request.contextPath}/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="${request.contextPath}/assets/css/new_styles.css" rel="stylesheet">
 
-    <!-- =======================================================
-    * Template Name: OnePage
-    * Updated: Mar 10 2023 with Bootstrap v5.2.3
-    * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
 </head>
 
 <body>
@@ -143,11 +136,11 @@
                                             <input type="hidden" name="investmentType" class="form-control" id="investmentType" />
 
                                         <div class="col-md-12 form-group">
-                                            <label for="investmentAmount" class="col-sm-2 col-form-label">Re-enter sum:</label>
+                                            <label for="investmentAmount" class="col-sm-6 col-form-label">Re-enter sum:</label>
                                             <input type="text" name="investmentAmount" class="form-control" id="investmentAmount" placeholder="Amount" required />
                                         </div>
                                         <div class="form-group col-12">
-                                            <label for="term" class="col-sm-2 col-form-label">Term:</label>
+                                            <label for="term" class="col-sm-6 col-form-label">Term:</label>
                                             <input type="date" class="form-control" name="term" id="term" placeholder="Term" required />
                                         </div>
                                         <div class="my-3 col-12">
@@ -170,7 +163,6 @@
         </div>
     </div>
 </div>
-<div id="preloader"></div>
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
         class="bi bi-arrow-up-short"></i></a>
 
@@ -207,12 +199,12 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 
 
 <!-- Vendor JS Files -->
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="${request.contextPath}/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="${request.contextPath}/assets/vendor/aos/aos.js"></script>
+<script src="${request.contextPath}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="${request.contextPath}/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="${request.contextPath}/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="${request.contextPath}/assets/vendor/swiper/swiper-bundle.min.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -220,7 +212,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 
 
 <!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
+<script src="${request.contextPath}/assets/js/main.js"></script>
 
 </body>
 

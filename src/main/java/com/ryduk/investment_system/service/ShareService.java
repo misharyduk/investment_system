@@ -34,7 +34,9 @@ public class ShareService {
     public EntityPageDto<Share> getAllShares(PaginationParameters params){
         Sort.Direction direction = Sort.Direction.valueOf(params.getDirection());
 
-        Page<Share> page = shareRepo.findByIsTakenFalse(PageRequest.of(params.getPage() - 1, params.getPageSize()).withSort(Sort.by(direction, params.getField())));
+        Page<Share> page = shareRepo.findByIsTakenFalse(
+                PageRequest.of(params.getPage() - 1, params.getPageSize())
+                        .withSort(Sort.by(direction, params.getField())));
         List<Share> shares = page.stream().toList();
 
         return new EntityPageDto<>(

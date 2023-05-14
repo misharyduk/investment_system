@@ -31,7 +31,9 @@ public class DepositService {
     public EntityPageDto<Deposit> getAllDeposits(PaginationParameters params){
         Sort.Direction direction = Sort.Direction.valueOf(params.getDirection());
 
-        Page<Deposit> page = depositRepo.findByIsTakenFalse(PageRequest.of(params.getPage() - 1, params.getPageSize()).withSort(Sort.by(direction, params.getField())));
+        Page<Deposit> page = depositRepo.findByIsTakenFalse(
+                PageRequest.of(params.getPage() - 1, params.getPageSize())
+                        .withSort(Sort.by(direction, params.getField())));
         List<Deposit> deposits = page.stream().toList();
 
         return new EntityPageDto<>(

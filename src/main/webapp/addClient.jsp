@@ -30,7 +30,8 @@
     <link href="${request.contextPath}/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="${request.contextPath}/assets/css/style.css" rel="stylesheet">
+        <link href="${request.contextPath}/assets/css/new_styles.css" rel="stylesheet">
+
 
     <!-- =======================================================
     * Template Name: OnePage
@@ -102,7 +103,6 @@
 <br /><br />
 <%@ include file="jspf/footer.jspf" %>
 
-<div id="preloader"></div>
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->

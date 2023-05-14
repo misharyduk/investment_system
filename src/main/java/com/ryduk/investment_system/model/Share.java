@@ -17,16 +17,6 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 public class Share extends InvestmentType{
-//    @SequenceGenerator(
-//            name = "share_sequence_generator",
-//            sequenceName = "share_sequence_generator"
-//    )
-//    @Id
-//    @GeneratedValue(
-//            strategy = GenerationType.SEQUENCE,
-//            generator = "share_sequence_generator"
-//    )
-//    private int id;
     @Size(min = 0, max = 4000)
     @NotBlank
     private double price;

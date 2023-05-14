@@ -23,11 +23,13 @@
 			<div class="row justify-content-center">
          <p class="text-success text-center"><c:if test="${success == 1}">User successfully registered</c:if></p>
          <p class="text-danger text-center"><c:if test="${error == 0}">Cannot login, check credentials</c:if></p>
-         ${SPRING_SECURITY_LAST_EXCEPTION.message}
+
 				<div class="col-md-7 col-lg-5 mt-5">
+
 					<div class="wrap">
 
 						<div class="login-wrap p-4 p-md-5">
+						${SPRING_SECURITY_LAST_EXCEPTION.message}
 			      	<div class="d-flex">
 			      		<div class="w-100">
 			      			<h3 class="mb-4">Sign In</h3>

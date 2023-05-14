@@ -55,7 +55,8 @@ public class ClientService {
     public EntityPageDto<Client> getAllClients(PaginationParameters params){
         Sort.Direction direction = Sort.Direction.valueOf(params.getDirection());
 
-        Page<Client> page = clientRepo.findAll(PageRequest.of(params.getPage() - 1, 6).withSort(Sort.by(direction, params.getField())));
+        Page<Client> page = clientRepo.findAll(PageRequest.of(params.getPage() - 1, 6)
+                .withSort(Sort.by(direction, params.getField())));
         List<Client> clients = page.stream().toList();
 
         EntityPageDto<Client> clients1 = new EntityPageDto<>(
