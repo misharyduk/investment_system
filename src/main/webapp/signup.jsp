@@ -33,7 +33,7 @@
                             </div>
 
                         </div>
-                        <form:form action="/api/signup" class="signin-form" method="POST" modelAttribute="client">
+                        <form:form action="/signup" class="signin-form" method="POST" modelAttribute="client">
                             <div class="form-group mt-3">
                                 <form:input name="username" path="username" id="username" type="text" class="form-control"/>
                                 <form:label class="form-control-placeholder" for="username" path="username">Username</form:label>
@@ -64,7 +64,7 @@
                             </div>
 
                         </form:form>
-                        <p class="text-center">Already a member? <a data-toggle="tab" href="/login">Log In</a></p>
+                        <p class="text-center">Already a member? <a href="/login">Log In</a></p>
                     </div>
                 </div>
             </div>

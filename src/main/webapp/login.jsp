@@ -51,7 +51,7 @@
 		            </div>
 
 		          </form>
-		          <p class="text-center">Not a member? <a data-toggle="tab" href="/signup">Sign Up</a></p>
+		          <p class="text-center">Not a member? <a href="/signup">Sign Up</a></p>
 		        </div>
 		      </div>
 				</div>

@@ -151,10 +151,9 @@ public class InvestmentController {
     }
 
     @PostMapping("delete")
-    public ModelAndView deleteInvestment(@RequestParam("investmentId") int investmentId,
+    public ModelAndView deleteInvestment(@RequestParam("investmentId") int investmentId, @RequestParam("clientId") int clientId,
                                          @RequestParam("investmentType") String investmentType) {
 
-        int clientId = SecurityUtil.getUser().getId();
         Investment investment = investmentService.getInvestment(investmentId);
 
         ModelAndView mv = new ModelAndView("redirect:/clients/" + clientId + "?s=1");
